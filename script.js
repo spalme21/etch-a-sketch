@@ -16,13 +16,25 @@ function createGrid(dimension) {
         };
         container.appendChild(column);
     };
+    const squares = document.querySelectorAll(".square");
+    squares.forEach((square) => {
+        square.addEventListener("mouseover", () => {
+            square.style.backgroundColor = "black";
+        });
+    });
 };
 
 createGrid(edge);
 
-const squares = document.querySelectorAll(".square");
-squares.forEach((square) => {
-    square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = "black";
-    });
-});
+
+
+function reset() {
+    do {
+        edge = prompt("How many squares long should each side of the grid be? (Max 100)");
+    } while (edge < 1 || edge > 100);
+
+    createGrid(edge);
+};
+
+const btn = document.querySelector("button");
+btn.addEventListener('click', reset);
