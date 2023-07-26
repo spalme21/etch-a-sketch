@@ -17,5 +17,12 @@ function createGrid(dimension) {
         container.appendChild(column);
     };
 };
-console.log("hi");
+
 createGrid(edge);
+
+const squares = document.querySelectorAll(".square");
+squares.forEach((square) => {
+    square.addEventListener("mouseover", () => {
+        square.style.backgroundColor = "black";
+    });
+});
