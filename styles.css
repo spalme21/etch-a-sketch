@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 h1 {
     text-align: center;
 }
@@ -13,7 +17,10 @@ button {
 }
 
 .container {
+    margin: auto;   
+    border: solid;
     display: flex;
+    width: 500px;
 }
 
 .column {
@@ -28,5 +35,5 @@ button {
     height: 0;
     padding-top: 100%;
     flex: 1;
-    border: solid;
+
 }
